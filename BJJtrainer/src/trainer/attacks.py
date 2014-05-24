@@ -7,16 +7,10 @@ Created on 21 May 2014
 import random
 
 class Attack(object):
-    '''
-    classdocs
-    '''
-    
-    def __init__(self, name, succProb):
-        '''
-        Constructor
-        '''
+    def __init__(self, name, succProb, succMessage):
         self.name = name
         self.succProb = succProb
+        self.succMessage = succMessage;
         
-    def go(self):
+    def run(self):
         return True if (random.random()<self.succProb) else False
